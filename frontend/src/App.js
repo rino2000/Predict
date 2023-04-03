@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 export default function Home() {
   const [fileData, setFileData] = useState("");
@@ -31,7 +32,7 @@ export default function Home() {
         <input type="file" name="file" onChange={getFile} required />
         <button type="submit">Upload </button>
       </form>
-      {predict.length > 0 && <h2>Prediction = {predict.substring(2,5)}</h2>}
+      {predict.length > 0 && <h2>Prediction = {predict.substring(2,4)}</h2>}
     </>
   );
 }
