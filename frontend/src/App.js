@@ -18,7 +18,7 @@ export default function Home() {
 
     await axios({
       method: "POST",
-      url: "http://localhost:5000/predict",
+      url: "http://localhost:8000/predict",
       data: data,
     }).then((res) => {
       setPredict(JSON.stringify(res.data));
@@ -31,7 +31,7 @@ export default function Home() {
         <input type="file" name="file" onChange={getFile} required />
         <button type="submit">Upload </button>
       </form>
-      {predict.length > 0 && <h2>Prediction = {predict.substring(2, 4)}</h2>}
+      {predict.length > 0 && <h2>Prediction = {predict.substring(2,5)}</h2>}
     </>
   );
 }
